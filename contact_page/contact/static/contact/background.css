@@ -257,8 +257,8 @@ color:   #c678dd;
 
 @media(max-width:1260px){
   #left-code{
-    padding-right: 5% !important;
-    margin-right : 5% !important;
+    padding-right: 8% !important;
+    margin-right : 8% !important;
   }
   #typewriter{
     visibility: hidden;
