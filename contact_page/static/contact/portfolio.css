@@ -1,0 +1,65 @@
+
+/* Portofolio */
+body{
+  color: #444444;
+}
+#cont-banner{
+ padding-top: 5%;
+ background-color: transparent;
+} 
+
+.portfolio{
+  background-color: transparent !important;
+}
+
+.card{
+  box-shadow: 0 5px 10px -2px silver;
+}
+
+.card-body{
+  border: 2px silver;
+}
+
+h3{
+  color: var(--myblue);
+}
+.a-title:link {
+  text-decoration: none;
+}
+
+.a-title:visited {
+  text-decoration: none;
+}
+
+.a-title:hover>h3 {
+  color :rgb(32, 131, 230);
+  text-decoration: underline;
+  text-decoration-color: rgb(32, 131, 230);
+  font-weight:bold;
+}
+.a-title:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(32, 131, 230);
+  font-weight:bold;
+}
+
+.a-title:active {
+  text-decoration: none;
+}
+
+.card-holder{
+  border-radius: 20px;
+}
+
+@media (max-width: 1260px){
+#jobs.container {
+    margin-right: 40% !important;
+    max-width: 100%;
+    margin-left: 15%;
+    padding-right: 20%;
+  }
+#cont-banner.container {
+    max-width: 100%;
+    margin-left: 15%;
+  }
+}

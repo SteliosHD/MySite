@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import json
 
+with open('/etc/config.json') as config_file:
+    config = json.load(config_file)
 # import dotenv to load vars from env
 from dotenv import load_dotenv
 load_dotenv()
@@ -24,12 +27,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'b+8zq8qn7h87_8rw8qqzt2fa+8n_)vdst44#rywjwh%aeib4ty'
+SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['172.105.65.236']
 
 
 # Application definition
@@ -125,7 +128,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
@@ -141,5 +144,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # import pdb; pdb.set_trace()
-EMAIL_HOST_USER =os.getenv('EMAIL_USER') # load from env file
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS')
+EMAIL_HOST_USER =config['EMAIL_USER'] # load from env file
+EMAIL_HOST_PASSWORD = config['EMAIL_PASS']
