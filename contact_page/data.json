@@ -1,0 +1,16 @@
+{
+    "people_contacted": [
+        {
+            "sender_name": "S",
+            "sender_lname": "Bitzas",
+            "sender_email": "stelios.bitzas@gmail.com",
+            "message": "hello"
+        },
+        {
+            "sender_name": "Stylianos",
+            "sender_lname": "Bitzas",
+            "sender_email": "stelios.bitzas@gmail.com",
+            "message": "Hello"
+        }
+    ]
+}

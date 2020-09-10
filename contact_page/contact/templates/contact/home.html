@@ -1,0 +1,55 @@
+{% extends "contact/base.html" %}
+{% block content %}
+<main role="main" class="container">
+    <div class="holder ">
+      <div class="row">
+        <div  class="holder-col col-sm-5">
+          <div class="rounded rounded-circle outlier-image">
+            <div id="home-pic">
+               <img src="/media/profile_pics/steliosarta.jpg" class="rounded rounded-circle " alt="Me">
+            </div>
+          </div>
+        </div>
+        <div class="holder-col description col-sm-7 area-style">
+          <h5>Mathematics, Computer Science, AI and more... </h5>
+          <h1>Stelios Bitzas</h1>
+          <p>
+            Hi! My name is Stelios. I'm a Mathematician and currently a graduate student in computer science. My main area of focus
+            is Artificial Intelligence. I'm also involved with web development and Django.
+          </p>
+          <a href="/media/cv.pdf" download>
+          <button type="button" class="btn btn-outline-secondary rounded-circle focus">Download CV</button>
+          </a>
+          <a href="mailto: stelios.bitzas@gmail.com">
+          <button type="button" class="btn btn-outline-secondary rounded-circle not-active" >Contact</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <main id="what" role="main" class="container">
+
+        <div class="row beg-descr mr-auto  ">
+          <h3 class="home-h3-tags pl-5">What I Do</h3>
+        </div>
+        <div class="row mr-auto  ">
+         <ul class="fas fa-ul container" >
+          {% for post  in object_list  %}
+                <li style="list-style-type: none;" class=" do-li col-sm-4 float-sm-left" >
+                  <i class="{{post.icon}}"></i>
+                    {{post.content}}
+                </li>
+            {% if forloop.counter|divisibleby:3 and forloop.counter|add:1 < object_list|length %}
+            </ul>
+            </div><!-- close existing row and open another one-->      
+            <div class="row mr-auto  "> 
+              <ul class="fas fa-ul container" >
+            {% endif %}
+          {% endfor %}
+          </ul>
+        </div>
+
+        
+  </main>
+
+{% endblock content %}

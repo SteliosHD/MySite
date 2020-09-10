@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html id="content-2"  lang="en">
+<head >
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link  rel="stylesheet" type = "text/css" href=" {% static 'contact/base.css' %}">
+    <link rel="stylesheet" type="text/css" href=" {% static 'contact/home.css' %}">
+    <link rel="stylesheet" type="text/css" href=" {% static 'contact/resume.css' %}">
+    <link rel="stylesheet" type="text/css" href=" {% static 'contact/portfolio.css' %}">
+    <link rel="stylesheet" type="text/css" href=" {% static 'contact/contact.css' %}">
+    <link rel="stylesheet" type="text/css" href=" {% static 'contact/background.css' %}">
+    
+
+
+
+
+    {% if title %}
+        <title>Stelios Bitzas - {{ title }}</title>
+    {% else %}
+        <title>Stelios Bitzas</title>
+    {% endif %}
+</head>
+<body id ="content" class=" loading">
+    <div id="code" class="container-fluid" >
+
+      <div id="left-code">
+      <ul id="ul-code">
+      </ul>
+      </div>
+
+      <div id="right-code">
+        <!-- <span class="console purp-highlight">from __future__ import</span> <span class="blue-highlight"> braces</span>
+          <span class="purp-highlight">File</span><span class="lt string-highlight">stdin</span>, line <span class="red-highlight">1</span>
+        <span class="purp-highlight">SyntaxError: </span>not a chance -->
+        <ul id="ul-r-code">
+          <pre id="typewriter"class="">
+<span class="console purp-highlight">print</span>(<span class="string-highlight">'We are the &#10100;&#10101;who say"&#10100;&#10101;!"'.
+    format('knights', 'Ni')</span>)
+<span class="pt"></span>
+<span class="console purp-highlight">from __future__ import</span> <span class="blue-highlight"> braces</span>
+  <span class="pt-error-1"></span><span class="pt-error-2"></span><span class="pt-error-3"></span><span class="pt-error-4"></span>
+<span class="pt-error-5"></span><span class="pt-error-6"></span>
+<span class="console purp-highlight">import __hello__</span>
+<span class="pt-2"></span>
+<span class="console purp-highlight"></span></pre>
+        </ul>
+      </div>
+
+    </div>
+    <!-- <div id='img-wrapper' class="container-fluid">
+    <img id="background-image" src="/media/lines_geometric_crop.png"></img>
+    </div> -->
+    <!-- <div id='img-wrapper' class="container-fluid">
+      <img id="background-image-2"src="/media/lines_geometric2_crop.png" alt="">
+      <img id="geo" src="/media/geometric.png" alt="">
+    </div> -->
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+    <div id="social"class="float-right">
+            <ul class="social-media-banner">
+              <li><a href="https://www.facebook.com/stelios.bitzas/" class="f-icon fa fa-facebook"></a></li>
+              <li><a href="https://www.linkedin.com/in/stelios-bitzas/" class="f-icon fa fa-linkedin"></a></li>
+              <li><a href="https://www.instagram.com/stelios_bitzas/" class="f-icon fa fa-instagram"></a></li>
+              <li><a href="mailto: stelios.bitzas@gmail.com" class="f-icon fa fa-google"></a></li>
+              <li><a href="https://github.com/SteliosHD" class="f-icon fa fa-github"></a></li>
+            </ul>
+    </div>
+    <header class="site-header">
+      <nav class=" loading-nav navbar navbar-expand-sm navbar-light bg-steel fixed-top ">
+        <div class="container ">
+          <a class="navbar-brand  brand-title mr-4" href="{% url 'contact-home' %}"> <img  src="/media/drone_crop.png" class="image" id="logo-s"></img> <em id="first_name">Stelios</em> Bitzas</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav ml-auto ">
+              <a class="nav-item nav-link {% if title == 'Home' %}active{% endif %}" href="{% url 'contact-home' %}">About Me</a> <!--added logic by django to enable active class-->  <!--alternative {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}-->
+              <a class="nav-item nav-link {% if title == 'Portfolio' %}active{% endif %}" href="{% url 'contact-portfolio' %}">Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    {% if messages %}
+    {% for message in messages %}
+    <div class=" container alert alert-{{ message.tags }} alert-dismissible fade show ">
+      {{ message }}
+      <button type="button" class="close" data-dismiss='alert' aria-label="Close">
+        <span aria-hidden='true'>&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% block content %}{% endblock %}  
+    <!-- Footer -->
+    <footer id="foot"  class="page-footer container-fluid">
+      <div class="page-footer font-small white container-fluid">
+        <span class="copyright text-right">
+          © 2020 Copyright:<a href="{% url 'contact-home' %}"> stelios.bitzas</a>Ⓡ
+        </span>
+      </div>
+      <!-- Copyright -->
+
+      <!-- Copyright -->
+    
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="{% static 'contact/scripts/my.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9cbaaa6963.js" crossorigin="anonymous"></script>
+</body>
+</html>

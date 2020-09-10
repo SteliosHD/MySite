@@ -1,0 +1,51 @@
+{% extends "contact/base.html" %}
+{% block content %}
+<!-- <main role="main" class="container">
+    <hr>
+    <h2>Portfolio Page</h2>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro suscipit nesciunt quos omnis numquam maxime optio voluptate sequi at iure, odit distinctio consequuntur officia accusamus asperiores, similique sapiente esse accusantium.
+    </p> -->
+    <main role="main ">
+    
+        <section id="cont-banner"class=" jumbotron cont-banner text-center container">
+            <div class="container">
+                <h1 class="jumbotron-heading">Portfolio</h1>
+                <p class="lead text-muted">Projects that I've worked on, project that I am currently working, and projects I plan to work. </p>
+            </div>
+        </section>
+    
+        <div class="album portfolio py-5 bg-light">
+            <div id="jobs" class="container">
+                
+                <div class="row">
+                    {%for post in object_list%} <!-- replace this with posts from posts-->
+                    <div class="d-flex card-holder col-sm-4">
+                        <div class="card mb-4 box-shadow">
+                            <a href="{{post.link}}">
+                            <img class="card-img-top"
+                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                                alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                                src="{{post.image.url}}"
+                                data-holder-rendered="true">
+                            </a>
+                            <div class="card-body">
+                                <a class="a-title" href="{{post.link}}"><h3>{{post.title}}</h3></a>
+                                <p class="card-text">{{post.content}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <span class="badge badge-{{post.get_category_display}}">{% if post.category == 'L' %}Live {% elif post.category == 'UC' %}Under Construction{% elif post.category == 'F' %}Future Project{% endif %}</span></h1>
+                                    </div>
+                                    <small class="text-muted">{{post.date}}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </main>
+<!-- </main> -->
+
+{% endblock content %}
