@@ -1,0 +1,76 @@
+/* home page*/
+.beg-descr{
+  padding-top: 10%;
+  padding-bottom: 3%;
+}
+h3.home-h3-tags{
+  color:#333333;
+}
+h3.home-h3-tags{
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 0;
+  background:linear-gradient(to right,white 0, white 29%, var(--myblue) 29%, var(--myblue) 50%, white 50%, white) bottom;
+  background-repeat: no-repeat;
+  background-size:100% 2px;
+}
+
+li.do-li{
+  overflow: hidden;
+  height: 5em;
+  padding: 1em;
+}
+
+li>i{
+  color: var(--myblue);
+  padding-right: 10px;
+}
+
+
+@media (min-width: 992px){
+  .holder{
+  padding-top: 2.5% !important;
+  padding-left: 10%;
+ 
+  }
+  .holder .description{
+    padding-top: 5% ;
+
+  }
+
+  .holder .description>p{
+    padding-top: 3%;
+    padding-bottom: 1%;
+    width: 75% ;
+  };
+}
+
+.holder .description>h5{
+  font-family: 'Courier New', Courier, monospace;
+  color: silver !important;
+  font-size: medium;
+  /* text-shadow: 0.3px 0.3px 0px silver;} */
+}
+.holder .description>h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+  font-weight: bold;
+}
+@media (max-width:992px){
+  .holder-col{
+    clear: both !important;
+  }
+  .holder .description{
+    padding-top: 5%;
+  }
+}
+
+@media (max-width: 575.98px) { 
+  .holder{
+    margin: auto;
+    width: 50%;
+
+  }
+  .holder .description{
+    padding-top: 3%;
+  }
+ }
