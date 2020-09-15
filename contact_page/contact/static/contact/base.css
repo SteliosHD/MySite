@@ -1,12 +1,16 @@
-body {
-  position: relative;
+:root{
   --mywhite : white;
-  background: var(--mywhite) ;
-  color: #333333;
-  margin-top: 3.55rem;
   --myblue: rgb(65, 160, 255);
   --mygrey: #e6e6e6;
   /* --myblue: rgb(235, 88, 88); */
+}
+
+/* GENERAl */
+body {
+  position: relative;
+  background: var(--mywhite) ;
+  color: #333333;
+  margin-top: 3.55rem;
   overflow-x: hidden;
 
 }
@@ -16,11 +20,20 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
-ul {
-  margin: 0;
+img.rounded.rounded-circle{
+  padding: 10px !important;
+  background-color: whitesmoke !important;
+  box-shadow: 0 0 10px 2px silver !important;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
+/*END GENERAl */
 
+
+/* NAVBAR */
 .bg-steel {
   background-color:var(--mywhite) !important;
   opacity: 93%;
@@ -50,10 +63,6 @@ ul {
   border-radius: 3px;
   margin-bottom: 20px;
 }
-
-
-
-/* Added by me */
 .brand-title{
   color: black !important ;
 }
@@ -70,25 +79,8 @@ ul {
   /* width: 1.5em;
   height: 2.5em; */
 }
-/* #logo-s{
-  padding: 2.5px 9.5px 1px 9px;
-  color: white;
-  font-weight: 900;
-  text-shadow: 0px 0.5px, 1px 0px, 0.5px 0px white; 
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.5em;
-  background-color: var(--myblue);
-} */
 
-img.rounded.rounded-circle{
-  padding: 10px !important;
-  background-color: whitesmoke !important;
-  box-shadow: 0 0 10px 2px silver !important;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-}
+/*END NAVBAR */
 
 
 /* Pre-Loader/Loader */
@@ -207,99 +199,7 @@ img.rounded.rounded-circle{
     height: 0;
   }  
 }
-
-
-/* Footer */
-a.fa.f-icon{
-  color: var(--myblue);
-  padding: 0.8rem;
-  font-size: 2rem;
-  width: 3rem;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 60%;
-}
-a.fa.f-icon:hover {
-  opacity: 0.7;
-}
-
-#social{
-  position: relative;
-  padding: 0 2% 0 0;
-}
-.social-media-banner>li{
-  list-style-type: none;
-}
-
-.social-media-banner{
-  /* transform: rotate(-30deg); */
-  padding-left: 0;
-  padding-right: 0.4em;
-  border: 1px solid var(--mygrey);
-  border-radius: 10px;
-  background-color: var(--mygrey);
-  
-}
-
-/* .fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-} */
-#foot{
-  position: relative;
-  /* border-top: 3px solid var(--mygrey); */
-}
-
-.page-footer{
-  /* border-top: 1px solid gainsboro; */
-  padding: 2px 0 0 0;
-  float: left;
-  text-align: center;
-  height: 2rem;
-  z-index: 1;
-  background-color: white !important;
-}
-.copyright{
-  height: 3rem;
-  width: auto;
-  z-index: 1;
-  padding: 0.7rem;
-
-}
-
-/* .page-footer>ul>li{
-  list-style-type: none;
-  float: left;
-
-}
-.page-footer>ul>li:last-child { float:right; } */
-
-@media(max-width:565px){
-  .page-footer>ul{
-  list-style-type: none;
-  float: left;
-  padding-left: 27%;
-
-}
-.page-footer>ul>li:last-child { 
-  float:left; 
-}
-}
+/*END Pre-Loader/Loader */
 
 
 /* Buttons */
@@ -336,6 +236,83 @@ a.fa.f-icon:hover {
 .btn.rounded-circle.not-active:hover{
   background-color: silver;
 }
+
+/* END Buttons */
+
+
+/* Footer */
+a.fa.f-icon{
+  color: var(--myblue);
+  padding: 0.8rem;
+  font-size: 2rem;
+  width: 3rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 60%;
+}
+a.fa.f-icon:hover {
+  opacity: 0.7;
+}
+
+#foot{
+  position: relative;
+  /* border-top: 3px solid var(--mygrey); */
+}
+
+.page-footer{
+  /* border-top: 1px solid gainsboro; */
+  padding: 2px 0 0 0;
+  float: left;
+  text-align: center;
+  height: 2rem;
+  z-index: 1;
+  background-color: white !important;
+}
+.copyright{
+  height: 3rem;
+  width: auto;
+  z-index: 1;
+  padding: 0.7rem;
+
+}
+/* END Footer */
+
+
+/* SOCIAL RIBBON */
+#social{
+  position: relative;
+  padding: 0 2% 0 0;
+}
+.social-media-banner>li{
+  list-style-type: none;
+}
+
+.social-media-banner{
+  /* transform: rotate(-30deg); */
+  padding-left: 0;
+  padding-right: 0.4em;
+  border: 1px solid var(--mygrey);
+  border-radius: 10px;
+  background-color: var(--mygrey);
+  
+}
+/*END  SOCIAL RIBBON */
+
+
+/* MEDIA-OTHER SCREENS */
+@media(max-width:565px){
+  .page-footer>ul{
+  list-style-type: none;
+  float: left;
+  padding-left: 27%;
+
+}
+  .page-footer>ul>li:last-child { 
+    float:left; 
+  }
+}
+/* MEDIA-OTHER SCREENS */
+
 
 
 

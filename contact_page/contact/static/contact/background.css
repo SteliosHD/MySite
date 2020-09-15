@@ -1,101 +1,4 @@
-#geo{
-  position: relative;
-  left: -2%;
-  top: -2%;
-  height: 95%;
-  width: auto;
-}
-@media(min-width: 1280px){
-  #background-image{
-    position: relative;
-    left: 70%;
-    top: -5%;
-    transform: rotate(15deg);
-    z-index: -3;
-    overflow: hidden;
-  }
-
-  #background-image-2{
-
-    position: relative;
-    left: -10%;
-    top: 4%;
-    transform: rotate(15deg);
-    z-index: -3;
-    height: 145%;
-    width: auto;
-    overflow-y: hidden !important;
-  }
-
-  #img-wrapper{
-    position: absolute;
-    overflow: hidden !important;
-    height: 100%;
-    opacity: 40%;
-    z-index: -5;
-  }
-}
-
-@media(max-width:1279px){
-    #background-image{
-    visibility: hidden;
-    pointer-events: none;
-    overflow: hidden;
-  }
-
-  #background-image-2{
-
-    position: fixed;
-    left: -10%;
-    top: 20%;
-    height: 70%;
-    width: auto;
-    transform: rotate(15deg);
-    z-index: -3;
-    overflow-y: hidden !important;
-    transform: rotate(10deg);
-  }
-
-  #img-wrapper{
-    position: fixed;
-    overflow: hidden !important;
-    height: 100%;
-    width: 50%;
-    opacity: 40%;
-    z-index: -5;
-  }
-}
-
-@media(max-width:580px){
-    #background-image{
-    visibility: hidden;
-    pointer-events: none;
-    overflow: hidden;
-  }
-
-  #background-image-2{
-
-    position: fixed;
-    left: -10%;
-    top: 5%;
-    height: 50%;
-    width: auto;
-    transform: rotate(15deg);
-    z-index: -3;
-    overflow-y: hidden !important;
-    transform: rotate(10deg);
-  }
-
-  #img-wrapper{
-    position: fixed;
-    overflow: hidden !important;
-    height: 100%;
-    width: 50%;
-    opacity: 40%;
-    z-index: -5;
-  }
-} 
-
+/* CODE-BASIC BLOCK */
 #code{
     /* white-space: pre; */
     /* font-size: 1.5em; */
@@ -104,6 +7,8 @@
     z-index: -5;
     position: absolute;
     float: left;
+
+    /* LINES */
     background: -webkit-linear-gradient(left, white, white 3.5%, var(--mygrey) 3.5%, var(--mygrey) 3.6%,
      white 3.6%, white 81.5%, var(--mygrey) 81.5%, var(--mygrey) 81.7%, white 81.7%, white);
     border: 3px solid var(--mygrey);
@@ -117,6 +22,10 @@
     /* padding-bottom: 0; */
 }
 
+/*END CODE-BASIC BLOCK */
+
+
+/* LEFT-CODE- NUMBERS ON LINES */
 #left-code{
     float: left;
     position: relative;
@@ -129,6 +38,24 @@
     /* border-right: 3px solid var(--mygrey); */
 
 }
+
+#left-code>ul{
+    padding-left: 0.7em;
+    padding-right: 2.7em;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#left-code>ul>li{
+    width: 1.2em;
+    padding-bottom: 1px;
+    list-style-type: none;
+    text-align: right !important ;
+}
+/*END LEFT-CODE- NUMBERS ON LINES */
+
+
+/* RIGHT-CODE- TYPEWRITER */
 #right-code{
     float: left;
     position: relative;
@@ -147,29 +74,10 @@
     line-height: 110.05%;
     margin-bottom: 0;
 }
-
-#left-code>ul{
-    padding-left: 0.7em;
-    padding-right: 2.7em;
-    list-style-type: none;
-    padding-left: 0;
-}
-
-#left-code>ul>li{
-    width: 1.2em;
-    padding-bottom: 1px;
-    list-style-type: none;
-    text-align: right !important ;
-}
-/* #left-code>ul>li:last-child{
-    padding-bottom: 1em;
-    position: absolute;
-    z-index: -10;
-} */
+/* END RIGHT-CODE- TYPEWRITER */
 
 
-
-
+/* TYPEWRITER COLORS AND CONTENT */
 .purp-highlight{
 color:   #c678dd;
 }
@@ -251,9 +159,13 @@ color:   #c678dd;
 	0%{opacity: 0;}
 	100%{opacity: 1;}
 }
+/* END TYPEWRITER COLORS AND CONTENT */
 
 
 
+
+
+/* MEDIA-OTHER SCREENS */
 
 @media(max-width:1260px){
   #left-code{
@@ -276,4 +188,5 @@ color:   #c678dd;
     width: 70%;
   }
 }
+/* END MEDIA-OTHER SCREENS */
 
