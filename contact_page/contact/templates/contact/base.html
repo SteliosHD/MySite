@@ -28,6 +28,9 @@
     {% endif %}
 </head>
 <body id ="content" class=" loading">
+    
+    
+    <!--Background-->
     <div id="code" class="container-fluid" >
 
       <div id="left-code">
@@ -36,9 +39,6 @@
       </div>
 
       <div id="right-code">
-        <!-- <span class="console purp-highlight">from __future__ import</span> <span class="blue-highlight"> braces</span>
-          <span class="purp-highlight">File</span><span class="lt string-highlight">stdin</span>, line <span class="red-highlight">1</span>
-        <span class="purp-highlight">SyntaxError: </span>not a chance -->
         <ul id="ul-r-code">
           <pre id="typewriter"class="">
 <span class="console purp-highlight">print</span>(<span class="string-highlight">'We are the &#10100;&#10101;who say"&#10100;&#10101;!"'.
@@ -49,21 +49,21 @@
 <span class="pt-error-5"></span><span class="pt-error-6"></span>
 <span class="console purp-highlight">import __hello__</span>
 <span class="pt-2"></span>
-<span class="console purp-highlight"></span></pre>
+<span class="console purp-highlight"></span>
+          </pre>
         </ul>
       </div>
-
-    </div>
-    <!-- <div id='img-wrapper' class="container-fluid">
-    <img id="background-image" src="/media/lines_geometric_crop.png"></img>
-    </div> -->
-    <!-- <div id='img-wrapper' class="container-fluid">
-      <img id="background-image-2"src="/media/lines_geometric2_crop.png" alt="">
-      <img id="geo" src="/media/geometric.png" alt="">
-    </div> -->
+      <!--End of Background-->
+    
+    
+    <!--Preloader-->
     <div class="preloader">
       <div class="loader"></div>
     </div>
+    <!--End of Preloader-->
+
+
+    <!--Social Media Ribbon-->
     <div id="social"class="float-right">
             <ul class="social-media-banner">
               <li><a href="https://www.facebook.com/stelios.bitzas/" class="f-icon fa fa-facebook"></a></li>
@@ -73,6 +73,9 @@
               <li><a href="https://github.com/SteliosHD" class="f-icon fa fa-github"></a></li>
             </ul>
     </div>
+    <!--End of Social Media Ribbon-->
+
+    <!--Navbar-->
     <header class="site-header">
       <nav class=" loading-nav navbar navbar-expand-sm navbar-light bg-steel fixed-top ">
         <div class="container ">
@@ -89,6 +92,10 @@
         </div>
       </nav>
     </header>
+
+    <!--End of Navbar-->
+
+    <!--Messages -->
     {% if messages %}
     {% for message in messages %}
     <div class=" container alert alert-{{ message.tags }} alert-dismissible fade show ">
@@ -99,7 +106,14 @@
     </div>
     {% endfor %}
     {% endif %}
+    <!--End of Messages-->
+
+
+    <!--Block Content-->
     {% block content %}{% endblock %}  
+    <!--End of Block Content-->
+
+
     <!-- Footer -->
     <footer id="foot"  class="page-footer container-fluid">
       <div class="page-footer font-small white container-fluid">
@@ -107,11 +121,10 @@
           © 2020 Copyright:<a href="{% url 'contact-home' %}"> stelios.bitzas</a>Ⓡ
         </span>
       </div>
-      <!-- Copyright -->
-
-      <!-- Copyright -->
-    
     </footer>
+    <!--End Footer-->
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
